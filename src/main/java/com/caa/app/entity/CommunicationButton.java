@@ -12,8 +12,8 @@ public class CommunicationButton {
 
     private String label;
 
-    @Column(name = "speach_text")
-    private String speachText;
+    @Column(name = "speech_text")
+    private String speechText;
 
 
     private String icon;
@@ -30,10 +30,10 @@ public class CommunicationButton {
 
     public CommunicationButton(){}
 
-    public CommunicationButton(Long id, String label, String speachText, String icon, Integer displayOrder, Boolean active, Category category) {
+    public CommunicationButton(Long id, String label, String speechText, String icon, Integer displayOrder, Boolean active, Category category) {
         this.id = id;
         this.label = label;
-        this.speachText = speachText;
+        this.speechText = speechText;
         this.icon = icon;
         this.displayOrder = displayOrder;
         this.active = active;
@@ -56,12 +56,12 @@ public class CommunicationButton {
         this.label = label;
     }
 
-    public String getSpeachText() {
-        return speachText;
+    public String getspeechText() {
+        return speechText;
     }
 
-    public void setSpeachText(String speachText) {
-        this.speachText = speachText;
+    public void setspeechText(String speechText) {
+        this.speechText = speechText;
     }
 
     public String getIcon() {

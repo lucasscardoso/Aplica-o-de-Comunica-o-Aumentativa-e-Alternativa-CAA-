@@ -5,6 +5,7 @@ import com.caa.app.service.CategoryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,6 +27,11 @@ public class CategoryController {
         log.info("CHAMANDO TODAS AS CATEGORIAS......");
        return categoryService.findAll();
 
+    }
+
+    @GetMapping("/{id}")
+    private Category findById(@PathVariable Long id){
+        return categoryService.findById(id);
     }
 
 }

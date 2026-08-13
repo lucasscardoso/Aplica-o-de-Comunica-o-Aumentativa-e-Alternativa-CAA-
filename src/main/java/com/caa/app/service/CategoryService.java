@@ -19,4 +19,9 @@ public class CategoryService {
     public List<Category> findAll(){
        return categoryRepository.findAll();
     }
+
+    public Category findById(Long id){
+        Category result = categoryRepository.findById(id).orElseThrow(() -> new RuntimeException("categoria nao encontrada"));
+        return result;
+    }
 }
